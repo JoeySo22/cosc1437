@@ -8,7 +8,7 @@ public class BubbleSortTest
 		for (int element : values)
 		System.out.print(element + " ");
 
-		IntBubbleSorter.bubbleSort(values);
+		bubbleSort(values);
 
 		System.out.println("\nSorted Order: ");
 		for (int element : values)
@@ -25,7 +25,15 @@ public class BubbleSortTest
 
 		for (lastPos = array.length; lastPos >= 0; lastPos--)
 		{
-			
+			for (index = 0; index < lastPos - 1; index++)
+			{
+				if (array[index] > array[index+1])
+				{
+					temp = array[index];
+					array[index] = array[index + 1];
+					array[index + 1] = temp;
+				}
+			}
 		}
 	}
 }
