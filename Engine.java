@@ -1,6 +1,4 @@
-/* Lab Two
- * Produced by Jose Soto
- * */
+
 
 import java.io.*;
 import java.util.Scanner;
