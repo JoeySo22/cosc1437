@@ -8,7 +8,7 @@ public class BubbleSortTest
 		for (int element : values)
 			System.out.print(element + " ");
 
-		selectionSort(values);
+		insertionSort(values);
 
 		System.out.println("\nSorted Order: ");
 		for (int element : values)
@@ -16,6 +16,25 @@ public class BubbleSortTest
 
 		System.out.println();
  	}
+
+	private static void insertionSort(int[] array)
+	{
+		int unsortedValue, scan;
+
+		for (int index = 1; index < array.length; index++)
+		{
+			unsortedValue = array[index];
+			scan = index;
+
+			while (scan > 0 && array[scan - 1] > unsortedValue)
+			{
+				array[scan] = array[scan - 1];
+				scan--;
+			}
+			
+			array[scan] = unsortedValue;
+		}
+	}
 
 	private static void bubbleSort(int[] array)
 	{
@@ -37,12 +56,6 @@ public class BubbleSortTest
 		}
 	}
 
-	//private static int findLowestNumber(int[] array)
-	//{
-	//	int lowest = Integer.MAX_VALUE;
-	//	for (int x = 0;
-	//	
-	//}
 
 	private static void selectionSort(int[] array)
 	{
@@ -77,4 +90,5 @@ public class BubbleSortTest
 			}
 		}
 	}
+
 }
